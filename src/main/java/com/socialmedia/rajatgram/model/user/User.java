@@ -1,18 +1,25 @@
 package com.socialmedia.rajatgram.model.user;
 
 
+import com.socialmedia.rajatgram.model.common.Address;
+import com.socialmedia.rajatgram.model.common.BeanContextBaseFields;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.MongoId;
 
 import java.util.UUID;
 
+
 @Document("user")
 @Data
-public class User {
+public class User extends BeanContextBaseFields {
     @Id
-    private String id= UUID.randomUUID().toString();
+    private String userId= UUID.randomUUID().toString();
     private String role;
+
+    @Indexed(unique = true, name = "userNameIndex")
     private String userName;
     private String password;
     private String firstName;
@@ -20,8 +27,8 @@ public class User {
     private Address address;
     private String email;
 
-    public String getId() {
-        return id;
+    public String getUserId() {
+        return userId;
     }
 
     public String getRole() {

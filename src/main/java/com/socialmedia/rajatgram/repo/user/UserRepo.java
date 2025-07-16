@@ -1,6 +1,7 @@
 package com.socialmedia.rajatgram.repo.user;
 
 import com.socialmedia.rajatgram.model.user.User;
+
 import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
@@ -32,4 +33,8 @@ public class UserRepo extends SimpleMongoRepository<User,String> {
         Query query = Query.query(criteria);
         return mongoTemplate.findOne(query, User.class);
     }
+//    public Page<User> getPaginatedUsers(int page, int size, String sortBy) {
+//        Pageable pageable = PageRequest.of(page, size, Sort.by(sortBy));
+//        return mongoTemplate.findUser(pageable);
+//    }
 }

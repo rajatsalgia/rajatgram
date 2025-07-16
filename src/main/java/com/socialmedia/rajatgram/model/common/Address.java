@@ -1,4 +1,4 @@
-package com.socialmedia.rajatgram.model.user;
+package com.socialmedia.rajatgram.model.common;
 
 import lombok.Data;
 import lombok.experimental.Accessors;
