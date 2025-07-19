@@ -1,4 +1,4 @@
-package com.socialmedia.rajatgram;
+package com.socialmedia.rajatgram.config;
 
 import com.socialmedia.rajatgram.model.user.User;
 import org.springframework.context.annotation.Bean;

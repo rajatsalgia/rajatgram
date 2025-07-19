@@ -8,6 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
 
+
 @Data
 @Accessors(chain = true)
 @Document(collection = "posts")
@@ -23,4 +24,5 @@ public class Post extends BeanContextBaseFields {
     private long likesCount;
     private List<String> likedByAccounts; // list of accountIds who liked the post
  // userId of the user who updated the post
+
 }

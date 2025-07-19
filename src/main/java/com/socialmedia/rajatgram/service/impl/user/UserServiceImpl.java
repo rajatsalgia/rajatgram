@@ -3,16 +3,17 @@ package com.socialmedia.rajatgram.service.impl.user;
 import com.socialmedia.rajatgram.model.user.User;
 import com.socialmedia.rajatgram.repo.user.UserRepo;
 import com.socialmedia.rajatgram.service.interfac.UserService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 @Service
+@RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
 
-    @Autowired
-    private UserRepo repo;
+    private final UserRepo repo;
 
     @Override
     public ResponseEntity<String> createUser(User userInput){
