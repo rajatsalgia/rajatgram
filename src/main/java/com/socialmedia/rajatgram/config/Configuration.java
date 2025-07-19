@@ -14,4 +14,5 @@ public class Configuration {
                 String.class
         );
     }
+
 }
